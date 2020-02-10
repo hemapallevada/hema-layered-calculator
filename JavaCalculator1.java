@@ -77,22 +77,23 @@ public class JavaCalculator1 extends JFrame {
         jbtNum1.addActionListener(new ListenToNum());
         jbtNum2.addActionListener(new ListenToNum());
         jbtNum3.addActionListener(new ListenToNum());
+        jbtAdd.addActionListener(new ListenToAdd());
         jbtNum4.addActionListener(new ListenToNum());
         jbtNum5.addActionListener(new ListenToNum());
         jbtNum6.addActionListener(new ListenToNum());
+        jbtSubtract.addActionListener(new ListenToSubtract());
         jbtNum7.addActionListener(new ListenToNum());
         jbtNum8.addActionListener(new ListenToNum());
         jbtNum9.addActionListener(new ListenToNum());
-        jbtNum0.addActionListener(new ListenToNum());
-
-        jbtAdd.addActionListener(new ListenToAdd());
-        jbtSubtract.addActionListener(new ListenToSubtract());
         jbtMultiply.addActionListener(new ListenToMultiply());
-        jbtDivide.addActionListener(new ListenToDivide());
-        jbtSolve.addActionListener(new ListenToSolve());
         jbtClear.addActionListener(new ListenToClear());
+        jbtNum0.addActionListener(new ListenToNum());
+        jbtSolve.addActionListener(new ListenToSolve());
+        jbtDivide.addActionListener(new ListenToDivide());
+   
+        
 
-        setSize(200,70);
+        setSize(200,200);
     }
 
     class ListenToClear implements ActionListener {
