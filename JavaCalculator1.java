@@ -5,29 +5,29 @@ import java.util.*;
 
 public class JavaCalculator1 extends JFrame {
 
-    double num1,num2;
-    private JButton jbtNum1;
-    private JButton jbtNum2;
-    private JButton jbtNum3;
-    private JButton jbtNum4;
-    private JButton jbtNum5;
-    private JButton jbtNum6;
-    private JButton jbtNum7;
-    private JButton jbtNum8;
-    private JButton jbtNum9;
-    private JButton jbtNum0;
-    private JButton jbtEqual;
+    double 1,2;
+    public JButton jb1;
+    public JButton jb2;
+    public JButton jb3;
+    public JButton jb4;
+    public JButton jb5;
+    public JButton jb6;
+    public JButton jb7;
+    public JButton jb8;
+    public JButton jb9;
+    public JButton jb0;
+    public JButton jbEqual;
 
-    private JButton jbtAdd;
-    private JButton jbtSubtract;
-    private JButton jbtMultiply;
-    private JButton jbtDivide;
-    private JButton jbtSolve;
-    private JButton jbtClear;
+    public JButton jbAdd;
+    public JButton jbSubtract;
+    public JButton jbMultiply;
+    public JButton jbDivide;
+    public JButton jbSolve;
+    public JButton jbClear;
 
-    private double TEMP;
-    private double SolveTEMP;
-    private JTextField jtfResult;
+    public double TEMP;
+    public double SolveTEMP;
+    public JTextField jtfResult;
 
     Boolean addBool = false;
     Boolean subBool = false;
@@ -40,22 +40,22 @@ public class JavaCalculator1 extends JFrame {
 
         JPanel p1 = new JPanel();
         p1.setLayout(new GridLayout(4, 4));
-        p1.add(jbtNum1 = new JButton("1"));
-        p1.add(jbtNum2 = new JButton("2"));
-        p1.add(jbtNum3 = new JButton("3"));
-        p1.add(jbtNum4 = new JButton("4"));
-        p1.add(jbtNum5 = new JButton("5"));
-        p1.add(jbtNum6 = new JButton("6"));
-        p1.add(jbtNum7 = new JButton("7"));
-        p1.add(jbtNum8 = new JButton("8"));
-        p1.add(jbtNum9 = new JButton("9"));
-        p1.add(jbtNum0 = new JButton("0"));
-        p1.add(jbtClear = new JButton("C"));
-        p1.add(jbtSolve = new JButton("="));
-        p1.add(jbtAdd = new JButton("+"));
-        p1.add(jbtSubtract = new JButton("-"));
-        p1.add(jbtMultiply = new JButton("*"));
-        p1.add(jbtDivide = new JButton("/"));
+        p1.add(jb1 = new JButton("1"));
+        p1.add(jb2 = new JButton("2"));
+        p1.add(jb3 = new JButton("3"));
+        p1.add(jb4 = new JButton("4"));
+        p1.add(jb5 = new JButton("5"));
+        p1.add(jb6 = new JButton("6"));
+        p1.add(jb7 = new JButton("7"));
+        p1.add(jb8 = new JButton("8"));
+        p1.add(jb9 = new JButton("9"));
+        p1.add(jb0 = new JButton("0"));
+        p1.add(jbClear = new JButton("C"));
+        p1.add(jbSolve = new JButton("="));
+        p1.add(jbAdd = new JButton("+"));
+        p1.add(jbSubtract = new JButton("-"));
+        p1.add(jbMultiply = new JButton("*"));
+        p1.add(jbDivide = new JButton("/"));
 
         JPanel p2 = new JPanel();
         p2.setLayout(new FlowLayout());
@@ -74,22 +74,22 @@ public class JavaCalculator1 extends JFrame {
 
         add(p);
 
-        jbtNum1.addActionListener(new ListenToNum());
-        jbtNum2.addActionListener(new ListenToNum());
-        jbtNum3.addActionListener(new ListenToNum());
-        jbtAdd.addActionListener(new ListenToAdd());
-        jbtNum4.addActionListener(new ListenToNum());
-        jbtNum5.addActionListener(new ListenToNum());
-        jbtNum6.addActionListener(new ListenToNum());
-        jbtSubtract.addActionListener(new ListenToSubtract());
-        jbtNum7.addActionListener(new ListenToNum());
-        jbtNum8.addActionListener(new ListenToNum());
-        jbtNum9.addActionListener(new ListenToNum());
-        jbtMultiply.addActionListener(new ListenToMultiply());
-        jbtClear.addActionListener(new ListenToClear());
-        jbtNum0.addActionListener(new ListenToNum());
-        jbtSolve.addActionListener(new ListenToSolve());
-        jbtDivide.addActionListener(new ListenToDivide());
+        jb1.addActionListener(new ListenTo());
+        jb2.addActionListener(new ListenTo());
+        jb3.addActionListener(new ListenTo());
+        jbAdd.addActionListener(new ListenToAdd());
+        jb4.addActionListener(new ListenTo());
+        jb5.addActionListener(new ListenTo());
+        jb6.addActionListener(new ListenTo());
+        jbSubtract.addActionListener(new ListenToSubtract());
+        jb7.addActionListener(new ListenTo());
+        jb8.addActionListener(new ListenTo());
+        jb9.addActionListener(new ListenTo());
+        jbMultiply.addActionListener(new ListenToMultiply());
+        jbClear.addActionListener(new ListenToClear());
+        jb0.addActionListener(new ListenTo());
+        jbSolve.addActionListener(new ListenToSolve());
+        jbDivide.addActionListener(new ListenToDivide());
    
         
 
@@ -111,7 +111,7 @@ public class JavaCalculator1 extends JFrame {
     }
 
 
-    class ListenToNum implements ActionListener {
+    class ListenTo implements ActionListener {
         public void actionPerformed(ActionEvent e) {
            
             display = jtfResult.getText();
@@ -124,7 +124,7 @@ public class JavaCalculator1 extends JFrame {
     class ListenToAdd implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             TEMP = Double.parseDouble(jtfResult.getText());
-num1=TEMP;
+1=TEMP;
             jtfResult.setText(jtfResult.getText()+"+");
             addBool = true;
         }
@@ -132,7 +132,7 @@ num1=TEMP;
 
     class ListenToSubtract implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            TEMP = Double.parseDouble(jtfResult.getText());num1=TEMP;
+            TEMP = Double.parseDouble(jtfResult.getText());1=TEMP;
             jtfResult.setText(jtfResult.getText()+"-");
             subBool = true;
         }
@@ -140,7 +140,7 @@ num1=TEMP;
 
     class ListenToMultiply implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            TEMP = Double.parseDouble(jtfResult.getText());num1=TEMP;
+            TEMP = Double.parseDouble(jtfResult.getText());1=TEMP;
             jtfResult.setText(jtfResult.getText()+"*");
             mulBool = true;
         }
@@ -148,7 +148,7 @@ num1=TEMP;
 
     class ListenToDivide implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            TEMP = Double.parseDouble(jtfResult.getText());num1=TEMP;
+            TEMP = Double.parseDouble(jtfResult.getText());1=TEMP;
             jtfResult.setText(jtfResult.getText()+"/");
             divBool = true;
         }
@@ -161,23 +161,23 @@ Double ans=0.0;
 String st=jtfResult.getText();int s;
             if (addBool == true){
 s=st.indexOf('+');
-num2=Double.parseDouble(st.substring(s+1));
-ans=num1+num2;
+2=Double.parseDouble(st.substring(s+1));
+ans=1+2;
                 }
             else if (subBool == true){
 s=st.indexOf('-');
-num2=Double.parseDouble(st.substring(s+1));
-ans=num1-num2;
+2=Double.parseDouble(st.substring(s+1));
+ans=1-2;
                 }
             else if (mulBool == true){
 s=st.indexOf('*');
-num2=Double.parseDouble(st.substring(s+1));
-ans=num1*num2;
+2=Double.parseDouble(st.substring(s+1));
+ans=1*2;
                 }
             if (divBool == true){
 s=st.indexOf('/');
-num2=Double.parseDouble(st.substring(s+1));
-ans=num1/num2;
+2=Double.parseDouble(st.substring(s+1));
+ans=1/2;
                 }
             jtfResult.setText(  Double.toString(ans));
 
